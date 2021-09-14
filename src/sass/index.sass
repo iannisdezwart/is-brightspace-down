@@ -1,0 +1,93 @@
+$red:        hsl(0deg,    40%,  50%)
+$green:      hsl(120deg,  40%,  50%)
+$dark_grey:  hsl(0deg,     0%,  33%)
+$light_grey: hsl(0deg,     0%,  67%)
+
+body
+	margin: 0
+	font-family: 'Urbanist', sans-serif
+
+#app
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+	margin: 1rem
+
+#logo
+	width: min(calc(100vw - 20px), 500px)
+
+#logo svg
+	width: 100%
+	height: 100%
+	margin: 2rem 0
+
+#status
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 1rem 0
+	background-color: $dark_grey
+	color: #fff
+	font-size: 2rem
+	font-weight: 600
+	border-radius: 5px
+
+#status.green
+	background-color: $green
+
+#status.red
+	background-color: $red
+
+#status-sub
+	margin-top: 1rem
+	text-align: center
+
+.status-bar-container
+	margin: 2rem 0
+
+.status-bars
+	display: flex
+
+.status-bars .bar
+	margin: 0 2px
+	width: 6px
+	height: 32px
+	background-color: $light_grey
+
+@media (max-width: 700px)
+	.status-bars .bar
+		margin: 0 1.5px
+		width: 5px
+
+@media (max-width: 550px)
+	.status-bars .bar
+		margin: 0 1px
+		width: 4px
+
+@media (max-width: 370px)
+	.status-bars .bar
+		margin: 0 1px
+		width: 3px
+
+.status-bar-header
+	font-weight: 600
+
+.status-bar-legend
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-top: .5rem
+	color: #a1a1a1
+
+.status-bar-legend .line
+	background-color: $light_grey
+	height: 1px
+	flex: 1
+	margin: 0 1rem
+
+#api
+	max-width: 60ch
+
+#api h1
+	text-align: center
